@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pozdrav.MainPage">
+
+    <StackLayout x:Name="stacklayout" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#CD5C5C" WidthRequest="350" HeightRequest="310">
+        <Entry Placeholder="Введите кому:"  BackgroundColor="#FA8072" x:Name="EntryRecipients" TextColor="#CD5C5C"/>
+        <Picker  Title="Выберите кому:" BackgroundColor="#FA8072" TextColor="Black">
+            <Picker.Items>
+                <x:String>
+                 Влад ЛЯЛИКУС
+                </x:String>
+                <x:String>
+                 Даниилус
+                </x:String>
+                <x:String>
+                 Ира Ириска
+                </x:String>
+                <x:String>
+                 Мой кот
+                </x:String>
+                <x:String>
+                 Продавец пятерочки
+                </x:String>
+            </Picker.Items>
+        </Picker>
+        <Entry Placeholder="Сообщение:" TextColor="#CD5C5C" BackgroundColor="#E9967A" x:Name="EntrySubject"/>
+        <Picker TextColor="Black" Title="Быстрый выбор:" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>
+                    Поздравляю с днём котов! Спасибо, что часто присматриваешь за моим котом. Мой кот также тебя поздравляет! Мяу.
+                </x:String>
+                <x:String>
+                    Поздравляю с Днем Рождения! Расти большой, не будь лапшой!
+                </x:String>
+                <x:String>
+                   Поздравляю с...! Я просто не знаю, что написать...
+                </x:String>
+                <x:String>
+                   Поздравляю Вас с победой в лотерее! Вы только что выйграли 250$! Чтобы забрать свои деньги ПРЯМО СЕЙЧАС, заплатите 200$.
+                </x:String>
+                <x:String>
+                    Поздравляю с Днём Чаепития! Приглашаю тебя к себе в гости.
+                </x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Придумай за меня!" TextColor="#CD5C5C" x:Name="randombutton" Clicked="randombutton_Clicked_1" BackgroundColor="#FFA07A"/>
+        <Button Text="Отправить" x:Name="ButtonSend" TextColor="#CD5C5C" Clicked="ButtonSend_Clicked_1" BackgroundColor="#FFA07A"/>
+    </StackLayout>
+
+</ContentPage>
